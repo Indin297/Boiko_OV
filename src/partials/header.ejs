@@ -1,10 +1,8 @@
 <header>
   <h1><%= siteTitle %></h1>
   <nav>
-    <a href="index.html">Главная</a>
-    <a href="about.html">О проекте</a>
-    <a href="team.html">Участники</a>
-    <a href="journal.html">Журнал</a>
-    <a href="resources.html">Ресурсы</a>
+    <% pages.forEach(function(page) { %>
+      <a href="<%= page.name %>.html"><%= page.title %></a>
+    <% }); %>
   </nav>
 </header>
